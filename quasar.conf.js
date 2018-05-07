@@ -60,7 +60,8 @@ module.exports = function (ctx) {
         'QItemSide'
       ],
       directives: [
-        'Ripple'
+        'Ripple',
+        'BackToTop',
       ],
       // Quasar plugins
       plugins: [

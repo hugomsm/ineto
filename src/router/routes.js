@@ -4,12 +4,12 @@ export default [
     path: '/',
     component: () => import('layouts/default'),
     children: [
-      { path: '', component: () => import('pages/index') }
-    ]
+      { path: '', component: () => import('pages/menuprincipal') },
+    ],
   },
 
   { // Always leave this as last one
     path: '*',
-    component: () => import('pages/404')
-  }
-]
+    component: () => import('pages/404'),
+  },
+];

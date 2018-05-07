@@ -1,8 +1,8 @@
 <template>
   <div>
-    <q-collapsible icon="explore" label="First">
+    <q-collapsible icon='explore' label='First'>
     <div>
-      {{aula.descricao}}
+      {{aulaSelecionada.descricao}}
     </div>
   </q-collapsible>
   </div>
@@ -10,13 +10,6 @@
 
 <script>
 export default {
-  props: ['aula'],
-  // name: 'ComponentName',
-  data () {
-    return {}
-  }
-}
+  props: ['aulaSelecionada'],
+};
 </script>
-
-<style>
-</style>
