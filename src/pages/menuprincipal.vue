@@ -1,17 +1,20 @@
 <template>
 <q-layout>
-    <q-layout-header>
+    <q-layout-header class='q-headline text-center'>
       iNeto
     </q-layout-header>
 
 <q-page-container>
-  <q-page>
+  <q-page class='bg-light-blue-9'>
     <q-list>
-      <aulaItem v-for='aula in aulas' v-bind:key='aula.idAula' :aulaSelecionada='aula'></aulaItem>
+      <aula-item v-for='aula in aulas'
+      :key='aula.idAula'
+      :aulaSelecionada='aula'
+      class='q-pa-sm'>
+      </aula-item>
     </q-list>
-
       <q-btn v-back-to-top.animate='{offset: 250, duration: 200}' round color='red'
-      class='fixed-bottom-right animate-pop'
+      class='fixed-bottom-right animate-pop' size='xl'
       style='margin: 0 15px 15px 0'
       >
        <q-icon name='keyboard_arrow_up' />
@@ -22,11 +25,12 @@
 </template>
 
 <script>
+
 import AulaItem from '../components/AulaItem.vue';
 
 export default {
-  data: () => ({
-    return: {
+  data() {
+    return {
       header: 'iNeto',
       aulas: [
         {
@@ -40,8 +44,8 @@ export default {
           descricao: 'Conheça as funcionalidades básicas',
         },
       ],
-    },
-  }),
+    };
+  },
   components: {
     aulaItem: AulaItem,
   },

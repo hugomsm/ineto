@@ -2,9 +2,10 @@ export default [
   {
     path: '/',
     component: () => import('pages/menuprincipal'),
-    /* children: [
-      { path: '', component: () => import('pages/index') },
-  ], */
+    children: [
+      { path: '/aula1', component: () => import('pages/aula1') },
+      { path: '/aula2', component: () => import('pages/aula2') },
+    ],
   },
 
   {

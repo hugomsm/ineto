@@ -6,11 +6,11 @@ module.exports = function (ctx) {
     plugins: [
     ],
     css: [
-      'app.styl'
+      'app.styl',
     ],
     extras: [
       ctx.theme.mat ? 'roboto-font' : null,
-      'material-icons'
+      'material-icons',
       // 'ionicons',
       // 'mdi',
       // 'fontawesome'
@@ -18,7 +18,7 @@ module.exports = function (ctx) {
     supportIE: false,
     vendor: {
       add: [],
-      remove: []
+      remove: [],
     },
     build: {
       scopeHoisting: true,
@@ -27,19 +27,19 @@ module.exports = function (ctx) {
       // analyze: true,
       // extractCSS: false,
       // useNotifier: false,
-      extendWebpack (cfg) {
+      extendWebpack(cfg) {
         cfg.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules|quasar)/
-        })
-      }
+          exclude: /(node_modules|quasar)/,
+        });
+      },
     },
     devServer: {
       // https: true,
       // port: 8080,
-      open: true // opens browser window automatically
+      open: true, // opens browser window automatically
     },
     // framework: 'all' --- includes everything; for dev only!
     framework: {
@@ -57,7 +57,8 @@ module.exports = function (ctx) {
         'QListHeader',
         'QItem',
         'QItemMain',
-        'QItemSide'
+        'QItemSide',
+        'QCollapsible'
       ],
       directives: [
         'Ripple',
@@ -65,8 +66,8 @@ module.exports = function (ctx) {
       ],
       // Quasar plugins
       plugins: [
-        'Notify'
-      ]
+        'Notify',
+      ],
     },
     // animations: 'all' --- includes all animations
     animations: [
@@ -83,38 +84,38 @@ module.exports = function (ctx) {
         theme_color: '#027be3',
         icons: [
           {
-            'src': 'statics/icons/icon-128x128.png',
-            'sizes': '128x128',
-            'type': 'image/png'
+            src: 'statics/icons/icon-128x128.png',
+            sizes: '128x128',
+            type: 'image/png',
           },
           {
-            'src': 'statics/icons/icon-192x192.png',
-            'sizes': '192x192',
-            'type': 'image/png'
+            src: 'statics/icons/icon-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
           },
           {
-            'src': 'statics/icons/icon-256x256.png',
-            'sizes': '256x256',
-            'type': 'image/png'
+            src: 'statics/icons/icon-256x256.png',
+            sizes: '256x256',
+            type: 'image/png',
           },
           {
-            'src': 'statics/icons/icon-384x384.png',
-            'sizes': '384x384',
-            'type': 'image/png'
+            src: 'statics/icons/icon-384x384.png',
+            sizes: '384x384',
+            type: 'image/png',
           },
           {
-            'src': 'statics/icons/icon-512x512.png',
-            'sizes': '512x512',
-            'type': 'image/png'
-          }
-        ]
-      }
+            src: 'statics/icons/icon-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+        ],
+      },
     },
     cordova: {
       // id: 'org.cordova.quasar.app'
     },
     electron: {
-      extendWebpack (cfg) {
+      extendWebpack(cfg) {
         // do something with cfg
       },
       packager: {
@@ -126,10 +127,10 @@ module.exports = function (ctx) {
 
         // Window only
         // win32metadata: { ... }
-      }
+      },
     },
 
     // leave this here for Quasar CLI
-    starterKit: '1.0.3'
-  }
-}
+    starterKit: '1.0.3',
+  };
+};
