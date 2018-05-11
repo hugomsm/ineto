@@ -1,36 +1,44 @@
 <template>
   <div>
-    <q-collapsible
-    group='aulas'
-    :class='headerColor'
-    icon='explore'
-    @show='openedCollapsible'
-    @hide='closedCollapsible'
-    :label='aulaSelecionada.tituloAula'>
-    <div>
-      <q-btn class='bg-light-blue-4 text-weight-bolder'>Começar aula!</q-btn>
-      <hr>
-      <p class='text-weight-bolder'> {{aulaSelecionada.descricao}} </p>
-    </div>
-  </q-collapsible>
+    <q-collapsible group='aulas' class='bg-light-blue-4 text-weight-bolder q-title text-center q-pa-xs shadow-6' header-class='q-title' image='../assets/aula.png' sparse :label='aulaSelecionada.tituloAula' :sublabel='aulaSelecionada.subTitulo'>
+      <q-card class='bg-light-blue-1 q-pa-lg shadow-6'>
+        <q-btn class='bg-light-blue-4 text-weight-bolder shadow-6 q-body-1 q-mb-xs' size=lg>
+          Começar aula!
+        </q-btn>
+        <hr>
+        <p class='text-weight-bolder'> {{aulaSelecionada.descricao}} </p>
+      </q-card>
+    </q-collapsible>
   </div>
 </template>
 
 <script>
-export default {
-  props: ['aulaSelecionada'],
-  data() {
-    return {
-      headerColor: 'bg-light-blue-4 text-weight-bolder text-center',
-    };
-  },
-  methods: {
-    openedCollapsible() {
-      this.headerColor = 'bg-light-blue-1 text-weight-bolder text-center';
-    },
-    closedCollapsible() {
-      this.headerColor = 'bg-light-blue-4 text-weight-bolder text-center';
-    },
-  },
-};
+  export default {
+    props: ['aulaSelecionada'],
+    /*   data() {
+        return {
+          headerColor: 'bg-light-blue-4 text-weight-bolder text-center q-pa-xs shadow-6',
+        };
+      },
+      /* methods: {
+        openedCollapsible() {
+          this.headerColor = 'bg-light-blue-4 text-weight-bolder text-center q-pa-xs';
+        },
+        closedCollapsible() {
+          this.headerColor = 'bg-light-blue-4 text-weight-bolder text-center q-pa-xs';
+        },
+      }, */
+  };
 </script>
+
+<style>
+  .q-item-sublabel {
+    color: black;
+    text-align: center;
+  }
+  
+  .q-item-label {
+    color: black;
+    text-align: center;
+  }
+</style>
