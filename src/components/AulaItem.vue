@@ -8,11 +8,11 @@
     sparse
     :label='aulaSelecionada.tituloAula'
     :sublabel='aulaSelecionada.subTitulo'
-    @show='feedbackClick'
     >
     <q-card class='bg-light-blue-1 q-pa-lg shadow-6'>
       <q-btn
       class='bg-light-blue-4 text-weight-bolder shadow-6 q-body-1 q-mb-xs'
+      @click='feedbackClick()'
       size=lg
       >
         Começar aula!
@@ -25,12 +25,14 @@
 </template>
 
 <script>
+/* eslint-dsable */
 
 export default {
   props: ['aulaSelecionada'],
   methods: {
     feedbackClick() {
-      this.$root.$emit('deviceFeedback');
+      const DF = window.plugins.deviceFeedback;
+      DF.haptic(DF.VIRTUAL_KEY);
     },
   },
 };
