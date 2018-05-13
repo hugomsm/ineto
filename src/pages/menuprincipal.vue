@@ -9,7 +9,7 @@
       class='q-ma-md'>
       </aula-item>
     </q-list>
-     <q-page-sticky position="bottom-right" offset="[50,200]">
+     <q-page-sticky position="bottom-right">
         <a
           v-back-to-top.animate='{offset: 50, duration: 200}'
           class="animate-pop play-backtotop non-selectable shadow-2"

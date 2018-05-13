@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="lHh Lpr lFf" class='bg-light-blue-9'>
     <q-layout-header class='text-center bg-light-blue-2' reveal>
       <div class="q-display-2">
      iNeto
