@@ -8,6 +8,11 @@
       :aulaSelecionada='aula'
       class='q-ma-md'>
       </aula-item>
+      <aula-item
+      :aulaSelecionada='emBreve'
+      class='q-ma-md'
+      disabled=true>
+      </aula-item>
     </q-list>
      <q-page-sticky position="bottom-right">
         <a
@@ -42,21 +47,27 @@ export default {
           idAula: 2,
           tituloAula: 'Aula 2',
           subTitulo: 'Conheça seu aparelho',
-          descricao: 'Conheça as funcionalidades básicas',
+          descricao: 'Conheça a função de cada botão em sua tela',
         },
         {
           idAula: 3,
           tituloAula: 'Aula 3',
-          subTitulo: 'Conheça seu aparelho',
-          descricao: 'Conheça as funcionalidades básicas',
+          subTitulo: 'Ícones principais',
+          descricao: 'Entenda a função das figuras que aparecem em sua tela',
         },
         {
           idAula: 4,
           tituloAula: 'Aula 4',
-          subTitulo: 'Conheça seu aparelho',
-          descricao: 'Conheça as funcionalidades básicas',
+          subTitulo: 'Digitação',
+          descricao: 'Entenda como funciona a digitação',
         },
       ],
+      emBreve: {
+        idAula: 5,
+        tituloAula: 'Aula 5',
+        subTitulo: 'Em breve',
+        descricao: 'Em breve',
+      },
     };
   },
   components: {
