@@ -1,11 +1,5 @@
 <template>
 <q-layout>
-    <q-layout-header class='text-center bg-light-blue-2' reveal>
-      <div class="q-display-2">
-      iNeto
-      </div>
-    </q-layout-header>
-
 <q-page-container>
   <q-page class='bg-light-blue-9'>
     <q-list no-border>
@@ -15,12 +9,15 @@
       class='q-ma-md'>
       </aula-item>
     </q-list>
-      <q-btn v-back-to-top.animate='{offset: 50, duration: 200}' round color='green'
-      class='fixed-bottom-right animate-pop' size='xl'
-      style='margin: 0 15px 15px 0'
-      >
-       <q-icon name='keyboard_arrow_up' />
-      </q-btn>
+     <q-page-sticky position="bottom-right" offset="[50,200]">
+        <a
+          v-back-to-top.animate='{offset: 50, duration: 200}'
+          class="animate-pop play-backtotop non-selectable shadow-2"
+          v-ripple.mat
+        >
+          Voltar ao topo
+        </a>
+      </q-page-sticky>
       </q-page>
       </q-page-container>
   </q-layout>
@@ -67,3 +64,18 @@ export default {
   },
 };
 </script>
+
+<style lang="stylus">
+@import '~variables'
+.play-backtotop
+  color white
+  position fixed
+  left 0
+  top 80%
+  padding 15px
+  width 90px
+  background-color $secondary
+  border-radius 0 15px 15px 0
+  &:hover
+   color $grey-4
+</style>

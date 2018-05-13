@@ -49,6 +49,7 @@ module.exports = function (ctx) {
         'QLayoutDrawer',
         'QPageContainer',
         'QPage',
+        'QPageSticky',
         'QToolbar',
         'QToolbarTitle',
         'QBtn',
@@ -60,6 +61,9 @@ module.exports = function (ctx) {
         'QItemSide',
         'QCollapsible',
         'QCard',
+        'QCarousel',
+        'QCarouselSlide',
+        'QCarouselControl',
       ],
       directives: [
         'Ripple',

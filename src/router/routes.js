@@ -5,6 +5,7 @@ export default [
     component: () => import('layouts/default'),
     children: [
       { path: '', component: () => import('pages/menuprincipal') },
+      { path: 'aula1', component: () => import('pages/aula1') },
     ],
   },
 
