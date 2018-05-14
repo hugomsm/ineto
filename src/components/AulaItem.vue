@@ -13,6 +13,7 @@
       <q-btn
       class='bg-light-blue-4 text-weight-bolder shadow-6 q-body-1 q-mb-xs'
       size=lg
+      @click='navigateToAula'
       >
         Começar aula!
       </q-btn>
@@ -31,6 +32,11 @@ export default {
     feedbackClick() {
       const DF = window.plugins.deviceFeedback;
       DF.haptic(DF.VIRTUAL_KEY);
+    },
+    navigateToAula() {
+      const id = this.aulaSelecionada.idAula.toString();
+      const url = `aula${id}`;
+      this.$router.push(`${url}`);
     },
   },
 };

@@ -4,14 +4,14 @@
             size='xl'
             color='red'
             push
-            @click='slide = slide - 1'>
+            @click='previousSlide'>
                 Anterior
             </q-btn>
             <q-btn
             size='xl'
             color='green'
             push
-            @click='slide = slide + 1'>
+            @click='nextSlide'>
                 Próximo
             </q-btn>
             <q-btn
@@ -19,13 +19,28 @@
             size='xl'
             color='light-blue-1'
             push
+            @click='navigateToHome'
             >
                 Voltar ao início
             </q-btn>
-            </div>
+    </div>
 </template>
 
 <script>
 export default {
+  props: ['relativeSlide'],
+  data() {
+  },
+  methods: {
+    navigateToHome() {
+      this.$router.push('/');
+    },
+    nextSlide() {
+      this.relativeSlide = this.relativeSlide + 1;
+    },
+    previousSlide() {
+      this.relativeSlide = this.relativeSlide - 1;
+    },
+  },
 };
 </script>
