@@ -4,7 +4,7 @@
     <slot></slot>
   </q-carousel>
   <!-- <div class='q-ml-md q-mb-md'> -->
-  <div class='row gutter-sm q-pa-md'>
+  <div class='row gutter-sm q-pa-sm'>
     <div class='col-6'>
             <q-btn
            class='full-width'
