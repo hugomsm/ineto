@@ -4,7 +4,7 @@
     group='aulas'
     class='bg-light-blue-4 text-weight-bolder q-title text-center q-pa-xs shadow-6'
     header-class='q-title'
-    image='../assets/aula.png'
+    :image='imagem'
     sparse
     :label='aulaSelecionada.tituloAula'
     :sublabel='aulaSelecionada.subTitulo'
@@ -28,6 +28,12 @@
 
 export default {
   props: ['aulaSelecionada'],
+  data() {
+    return {
+      /* eslint-disable global-require */
+      imagem: require('../assets/aula.png'),
+    };
+  },
   methods: {
     feedbackClick() {
       const DF = window.plugins.deviceFeedback;

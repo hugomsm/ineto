@@ -6,9 +6,6 @@
 
 <script>
 
-// eslint-disable-next-line
-console.log(window.plugins);
-
 window.screen.orientation.lock('portrait');
 
 export default {

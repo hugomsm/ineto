@@ -1,20 +1,24 @@
 <template>
   <q-layout>
-    <q-page-container >
+    <q-page-container>
         <q-page class='bg-light-blue-9'>
             <carousel-controller>
-                <q-carousel-slide class="bg-white full-height">
+                <q-carousel-slide class="bg-white">
                     <h2 class='text-center text-weight-medium'>
-                        Bem vindo ao iNeto! Clique no botão
+                        Bem vindo ao iNeto!
+                        <p>Aperte no botão </p>
                         <p class='text-green'>
-                        Próximo</p> (abaixo) para continuar a aula.
+                        Próximo (abaixo)</p>  para continuar a aula.
                     </h2>
                 </q-carousel-slide>
-                <q-carousel-slide class="bg-secondary">
-                    Slide 2
-                </q-carousel-slide>
-                <q-carousel-slide class="bg-tertiary">
-                    Slide 3
+                <q-carousel-slide class="bg-white">
+                    <h2 class='text-center text-weight-medium'>
+                        <p>Aperte no botão</p>
+                        <p class='text-red'>
+                        Anterior (abaixo)
+                        </p>
+                        para voltar para a parte anterior.
+                    </h2>
                 </q-carousel-slide>
             </carousel-controller>
         </q-page>
@@ -36,7 +40,3 @@ export default {
   },
 };
 </script>
-
-<style>
-</style>
-

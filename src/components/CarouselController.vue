@@ -1,10 +1,12 @@
 <template>
 <div style="display: grid; grid-template-rows: 1fr auto; height: calc(100vh - 48px);">
-  <q-carousel class="text-black q-ma-md bg-white" v-model='slide'>
+  <q-carousel class="text-black q-ma-md bg-white"
+  no-swipe
+  v-model='slide'>
     <slot></slot>
   </q-carousel>
-  <!-- <div class='q-ml-md q-mb-md'> -->
-  <div class='row gutter-sm q-pa-sm'>
+  <div class='row gutter-sm'
+  style='margin-left: 0px; margin-bottom: 16px; margin-right: 16px;'>
     <div class='col-6'>
             <q-btn
            class='full-width'
