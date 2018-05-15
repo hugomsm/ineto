@@ -33,7 +33,7 @@
            size='xl'
            color='light-blue-1'
            push
-           @click='navigateToHome'
+           @click='confirm.handler()'
            >
                 Voltar ao início
             </q-btn>
@@ -47,6 +47,24 @@ export default {
   data() {
     return {
       slide: 0,
+      confirm: {
+        label: 'Confirmar',
+        icon: 'done_all',
+        handler: () => {
+          this.$q
+            .dialog({
+              title: 'Confirmar',
+              message: 'Tem certeza que deseja voltar?',
+              ok: 'Sim',
+              cancel: 'Não',
+            })
+            .then(() => {
+              this.navigateToHome();
+            })
+            .catch(() => {
+            });
+        },
+      },
     };
   },
   methods: {
@@ -58,4 +76,8 @@ export default {
 </script>
 
 <style>
+  .modal-body{
+    font-size: 30px;
+    color: black;
+  }
 </style>
