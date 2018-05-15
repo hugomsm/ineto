@@ -6,11 +6,12 @@
         style="width:30vw;max-width:150px;"
       >
     </p>
-    <p class="text-faded">Desculpe, algo deu errado aqui...<strong>(404)</strong></p>
+    <p class="text-faded">Desculpe, essa aula ainda não está pronta...<strong>(404)</strong></p>
     <q-btn
+      size='xl'
       color="secondary"
       style="width:200px;"
       @click="$router.push('/')"
-    >Voltar</q-btn>
+    >Voltar para o menu</q-btn>
   </div>
 </template>
