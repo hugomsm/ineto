@@ -4,23 +4,6 @@
         <q-page class='bg-light-blue-9'>
             <carousel-controller>
                 <q-carousel-slide class='bg-white'>
-                    <h3 class='text-center text-weight-medium'>
-                        Bem vindo(a) ao iNeto!
-                        <p>Aperte no botão </p>
-                        <p class='text-green'>
-                        Próximo (abaixo)</p>  para continuar a aula.
-                    </h3>
-                </q-carousel-slide>
-                <q-carousel-slide class='bg-white'>
-                    <h3 class='text-center text-weight-medium'>
-                        <p>Se precisar, aperte no botão</p>
-                        <p class='text-red'>
-                        Anterior (abaixo)
-                        </p>
-                        para voltar para a parte anterior.
-                    </h3>
-                </q-carousel-slide>
-                <q-carousel-slide class='bg-white'>
                     <h4 class='text-center text-weight-medium'>
                         A tecnologia é para todos e
                         deve estar acessível para todos,

@@ -2,6 +2,7 @@
 <q-layout>
 <q-page-container>
   <q-page class='bg-light-blue-9'>
+    <neto-header></neto-header>
     <q-list no-border>
       <aula-item v-for='aula in aulas'
       :key='aula.idAula'
@@ -31,6 +32,7 @@
 <script>
 
 import AulaItem from '../components/AulaItem.vue';
+import NetoHeader from '../components/NetoHeader.vue';
 
 export default {
   data() {
@@ -41,18 +43,18 @@ export default {
           idAula: 1,
           tituloAula: 'Aula 1',
           subTitulo: 'Introdução',
-          descricao: 'Entenda os motivos de aprender sobre tecnologia',
+          descricao: 'Entenda os motivos de aprender a usar tecnologia',
         },
         {
           idAula: 2,
           tituloAula: 'Aula 2',
           subTitulo: 'Conheça seu aparelho',
-          descricao: 'Conheça a função de cada botão em sua tela',
+          descricao: 'Entenda os botões e entradas que estão no seu aparelho',
         },
         {
           idAula: 3,
           tituloAula: 'Aula 3',
-          subTitulo: 'Ícones principais',
+          subTitulo: 'Ícones',
           descricao: 'Entenda a função das figuras que aparecem em sua tela',
         },
         {
@@ -72,6 +74,7 @@ export default {
   },
   components: {
     aulaItem: AulaItem,
+    netoHeader: NetoHeader,
   },
 };
 </script>

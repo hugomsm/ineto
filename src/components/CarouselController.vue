@@ -1,8 +1,27 @@
 <template>
+<q-page>
+<neto-header></neto-header>
 <div style="display: grid; grid-template-rows: 1fr auto; height: calc(100vh - 48px);">
   <q-carousel class="text-black q-ma-md bg-white"
   no-swipe
   v-model='slide'>
+  <q-carousel-slide class='bg-white'>
+                    <h3 class='text-center text-weight-medium'>
+                        Bem vindo(a) ao iNeto!
+                        <p>Aperte no botão </p>
+                        <p class='text-green'>
+                        <big>PRÓXIMO</big> (abaixo)</p>  para continuar a aula.
+                    </h3>
+                </q-carousel-slide>
+                <q-carousel-slide class='bg-white'>
+                    <h3 class='text-center text-weight-medium'>
+                        <p><big>SE PRECISAR</big>, aperte no botão</p>
+                        <p class='text-red'>
+                        <big>ANTERIOR</big> (abaixo)
+                        </p>
+                        para voltar para a parte anterior.
+                    </h3>
+                </q-carousel-slide>
     <slot></slot>
   </q-carousel>
   <div class='row gutter-sm'
@@ -40,9 +59,13 @@
     </div>
     </div>
 </div>
+</q-page>
 </template>
 
 <script>
+
+import NetoHeader from './NetoHeader.vue';
+
 export default {
   data() {
     return {
@@ -71,6 +94,9 @@ export default {
     navigateToHome() {
       this.$router.push('/');
     },
+  },
+  components: {
+    netoHeader: NetoHeader,
   },
 };
 </script>

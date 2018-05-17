@@ -4,29 +4,31 @@
         <q-page class='bg-light-blue-9'>
             <carousel-controller>
                 <q-carousel-slide class='bg-white'>
-                    <h2 class='text-center text-weight-medium'>
-                        Seu aparelho possui algumas funções além do que aparece
-                        em sua tela.
-                    </h2>
+                    <h3 class='text-center text-weight-medium'>
+                        Em sua tela, você pode encontrar algumas figuras, chamadas
+                        <p><big class='text-primary'>ÍCONES</big>.</p>
+                        <p>Vamos entender o que elas significam.</p>
+                    </h3>
                 </q-carousel-slide>
                 <q-carousel-slide class='bg-white'>
-                    <h4 class='text-center text-weight-medium'>
-                        Ao lado ou em cima do aparelho, você pode encontrar alguns botões.
+                    <h3 class='text-center text-weight-medium'>
+                        Na parte de baixo do aparelho, encontramos <b>ícones</b>
+                        que podem controlar algumas coisas da tela.
                         <img :src='imagem1' height='100%' width='100%'>
-                    </h4>
+                    </h3>
                 </q-carousel-slide>
                 <q-carousel-slide class='bg-white'>
                     <h4 class='text-center text-weight-medium'>
-                        O botão sozinho serve para ligar ou desligar o aparelho.
-                        <p><img :src='imagem2' height='80%' width='80%'></p>
+                        Eles podem ter desenhos ou posições diferentes,
+                        mas apesar de mudarem de aparência, a função é a mesma.
+                        <img :src='imagem2' height='80%' width='80%'>
                     </h4>
                 </q-carousel-slide>
                 <q-carousel-slide class='bg-white'>
-                    <h4 class='text-center text-weight-medium'>
-                        Dois botões seguidos, ou as vezes um único botão mais longo,
-                        é o controle de volume.
-                        <img :src='imagem3' height='80%' width='80%'>
-                    </h4>
+                    <h3 class='text-center text-weight-medium'>
+                        Os mais comuns são parecidos com os mostrados abaixo
+                        <img :src='imagem3' height='100%' width='100%'>
+                    </h3>
                 </q-carousel-slide>
                <q-carousel-slide class='bg-white'>
                     <h4 class='text-center text-weight-medium'>
@@ -98,9 +100,9 @@ export default {
   data() {
     return {
       /* eslint-disable global-require */
-      imagem1: require('../assets/lateralcel.jpg'),
-      imagem2: require('../assets/powerbutton.jpg'),
-      imagem3: require('../assets/volumebutton.jpg'),
+      imagem1: require('../assets/barra-navegacao.png'),
+      imagem2: require('../assets/Nav-bar-collage.jpg'),
+      imagem3: require('../assets/default-navbar.jpg'),
       imagem4: require('../assets/entradausb.jpg'),
       imagem5: require('../assets/celcarregando.jpg'),
       imagem6: require('../assets/entradap2.jpg'),
