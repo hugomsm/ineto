@@ -12,8 +12,8 @@
                 </q-carousel-slide>
                 <q-carousel-slide class='bg-white'>
                     <h3 class='text-center text-weight-medium'>
-                        Na parte de baixo do aparelho, encontramos <b>ícones</b>
-                        que podem controlar algumas coisas da tela.
+                        Na parte de baixo da tela, encontramos ícones
+                        da <b>barra de navegação</b>.
                         <img :src='imagem1' height='100%' width='100%'>
                     </h3>
                 </q-carousel-slide>
@@ -31,35 +31,37 @@
                     </h3>
                 </q-carousel-slide>
                <q-carousel-slide class='bg-white'>
-                    <h4 class='text-center text-weight-medium'>
-                        Embaixo ou na lateral do aparelho,
-                        você deve encontrar um buraco retangular
-                        <img :src='imagem4' height='80%' width='80%'>
-                    </h4>
+                    <h3 class='text-center text-weight-medium'>
+                        O botão em forma de triângulo ou seta serve para
+                        voltar para a página ou ação anterior.
+                        <img :src='imagem4' height='100%' width='100%'>
+                    </h3>
                 </q-carousel-slide>
                 <q-carousel-slide class='bg-white'>
-                    <h4 class='text-center text-weight-medium'>
-                        Ele serve para ligar o carregador do celular.
+                    <h3 class='text-center text-weight-medium'>
+                        O botão em forma de círculo, ou as vezes em formato de "casa",
+                        serve para voltar para a tela inicial do sistema.
                         <img :src='imagem5' height='100%' width='100%'>
-                    </h4>
+                    </h3>
+                </q-carousel-slide>
+                <q-carousel-slide class='bg-white'>
+                    <h3 class='text-center text-weight-medium'>
+                        O botão em forma de quadrado mostra os aplicativos
+                        abertos recentemente.
+                        <img :src='imagem6' height='100%' width='100%'>
+                    </h3>
                 </q-carousel-slide>
                 <q-carousel-slide class='bg-white'>
                     <h4 class='text-center text-weight-medium'>
-                        Existe também um buraco em forma de círculo
-                         na parte de cima ou de baixo do aparelho.
-                        <img :src='imagem6' height='80%' width='80%'>
-                    </h4>
-                </q-carousel-slide>
-                <q-carousel-slide class='bg-white'>
-                    <h4 class='text-center text-weight-medium'>
-                        Esse buraco serve para conectar os fones de ouvido.
+                        Na parte de cima da tela, encontramos uma
+                        <p><big class='text-primary'>BARRA DE STATUS</big></p>
                         <img :src='imagem7' height='100%' width='100%'>
                     </h4>
                 </q-carousel-slide>
                 <q-carousel-slide class='bg-white'>
                     <h4 class='text-center text-weight-medium'>
-                        Geralmente os aparelhos possuem câmeras.
-                        Uma na parte de trás...
+                        No lado <big>DIREITO</big> da barra, encontramos informações sobre
+                        o horário, bateria, internet e som.
                         <img :src='imagem8' height='80%' width='80%'>
                     </h4>
                 </q-carousel-slide>
@@ -103,10 +105,10 @@ export default {
       imagem1: require('../assets/barra-navegacao.png'),
       imagem2: require('../assets/Nav-bar-collage.jpg'),
       imagem3: require('../assets/default-navbar.jpg'),
-      imagem4: require('../assets/entradausb.jpg'),
-      imagem5: require('../assets/celcarregando.jpg'),
-      imagem6: require('../assets/entradap2.jpg'),
-      imagem7: require('../assets/celular-com-fone-de-ouvido.jpg'),
+      imagem4: require('../assets/back-button.png'),
+      imagem5: require('../assets/home-button.png'),
+      imagem6: require('../assets/recent-button.png'),
+      imagem7: require('../assets/statusbar.png'),
       imagem8: require('../assets/cameratraseira.jpg'),
       imagem9: require('../assets/camerafrontal.jpg'),
       imagem10: require('../assets/bateriacelular.jpg'),

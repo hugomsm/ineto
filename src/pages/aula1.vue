@@ -42,6 +42,14 @@
                 </q-carousel-slide>
                 <q-carousel-slide class='bg-white'>
                     <h3 class='text-center text-weight-medium'>
+                        Lembre-se que a
+                        <big class='text-red'>APARÊNCIA</big>
+                        das funções podem mudar em cada aparelho,
+                        mas continuarão fazendo a mesma coisa
+                    </h3>
+                </q-carousel-slide>
+                <q-carousel-slide class='bg-white'>
+                    <h3 class='text-center text-weight-medium'>
                         Refaça as aulas se necessário!
                        <div class='q-display-1 text-primary'>Pratique</div> os exercícios das aulas.
                     </h3>
