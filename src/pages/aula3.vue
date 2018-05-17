@@ -62,14 +62,53 @@
                     <h4 class='text-center text-weight-medium'>
                         No lado <big>DIREITO</big> da barra, encontramos informações sobre
                         o horário, bateria, internet e som.
-                        <img :src='imagem8' height='80%' width='80%'>
                     </h4>
                 </q-carousel-slide>
                 <q-carousel-slide class='bg-white'>
                     <h4 class='text-center text-weight-medium'>
-                        E outra na parte da frente,
-                        chamada câmera frontal.
-                        <img :src='imagem9' height='100%' width='100%'>
+                        Outros ícones comuns são:
+                        <q-list highlight>
+                            <q-item>
+                                <q-item-side>
+                                    <q-item-tile avatar>
+                                        <img :src='imagem8'>
+                                    </q-item-tile>
+                                </q-item-side>
+                                Concluir
+                            </q-item>
+                            <q-item>
+                                <q-item-side>
+                                    <q-item-tile avatar>
+                                        <img :src='imagem9'>
+                                    </q-item-tile>
+                                </q-item-side>
+                                Fechar
+                            </q-item>
+                            <q-item>
+                                <q-item-side>
+                                    <q-item-tile avatar>
+                                        <img :src='imagem10'>
+                                    </q-item-tile>
+                                </q-item-side>
+                                Adicionar
+                            </q-item>
+                            <q-item>
+                                <q-item-side>
+                                    <q-item-tile avatar>
+                                        <img :src='imagem11'>
+                                    </q-item-tile>
+                                </q-item-side>
+                                Deletar
+                            </q-item>
+                            <q-item>
+                                <q-item-side>
+                                    <q-item-tile avatar>
+                                        <img :src='imagem12'>
+                                    </q-item-tile>
+                                </q-item-side>
+                                Editar
+                            </q-item>
+                        </q-list>
                     </h4>
                 </q-carousel-slide>
                 <q-carousel-slide class='bg-white'>
@@ -109,9 +148,16 @@ export default {
       imagem5: require('../assets/home-button.png'),
       imagem6: require('../assets/recent-button.png'),
       imagem7: require('../assets/statusbar.png'),
-      imagem8: require('../assets/cameratraseira.jpg'),
-      imagem9: require('../assets/camerafrontal.jpg'),
-      imagem10: require('../assets/bateriacelular.jpg'),
+      imagem8: require('../assets/done.jpg'),
+      imagem9: require('../assets/close.jpg'),
+      imagem10: require('../assets/add.jpg'),
+      imagem11: require('../assets/delete.jpg'),
+      imagem12: require('../assets/edit.jpg'),
+      imagem13: require('../assets/dictation.jpg'),
+      imagem14: require('../assets/share.jpg'),
+      imagem15: require('../assets/config.jpg'),
+      imagem16: require('../assets/options.jpg'),
+      imagem17: require('../assets/search.jpg'),
     };
   },
   methods: {
