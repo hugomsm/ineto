@@ -78,24 +78,9 @@
                             <p>Se estiver certa, a opção ficará <big class='text-green'>VERDE</big>, se estiver errado, a opção ficará <big class='text-red'>VERMELHA</big>. Continue tentando até acertar!</p>
                         </h3>
                     </q-carousel-slide>
-                    <q-carousel-slide class='bg-white'>
-                        <p class='text-center'><img :src='imagem2' height='70%' width='70%'></p>
-                        <div class='row gutter-sm' style='margin-left: 0px; margin-bottom: 16px; margin-right: 16px;'>
-                            <div v-for='opcao in opcoes1' v-bind:key='opcao.id' class='col-6'>
-                                <q-btn class='full-width text-black' size='xl' :color='opcao.cor' @click="checarResposta(opcao.id,$event)" push :label='opcao.resposta'>
-                                </q-btn>
-                            </div>
-                        </div>
-                    </q-carousel-slide>
-                    <q-carousel-slide class='bg-white'>
-                        <p class='text-center'><img :src='imagem4' height='80%' width='80%'></p>
-                        <div class='row gutter-sm' style='margin-left: 0px; margin-bottom: 16px; margin-right: 16px;'>
-                            <div v-for='opcao in opcoes2' v-bind:key='opcao.id' class='col-6'>
-                                <q-btn class='full-width text-black' size='xl' :color='opcao.cor' @click="checarResposta2(opcao.id,$event)" push :label='opcao.resposta'>
-                                </q-btn>
-                            </div>
-                        </div>
-                    </q-carousel-slide>
+                    <neto-quiz :opcoes='opcoes1' :imagem='imagem2' :respostaCerta='respostaCerta1'></neto-quiz>
+                    <neto-quiz :opcoes='opcoes2' :imagem='imagem4' :respostaCerta='respostaCerta2'></neto-quiz>
+                    <neto-quiz :opcoes='opcoes3' :imagem='imagem9' :respostaCerta='respostaCerta3'></neto-quiz>
                 </carousel-controller>
             </q-page>
         </q-page-container>
@@ -104,6 +89,7 @@
 
 <script>
     import CarouselController from '../components/CarouselController.vue';
+    import NetoQuiz from '../components/NetoQuiz.vue';
     
     export default {
         data() {
@@ -122,100 +108,79 @@
                 opcoes1: [{
                         id: 1,
                         resposta: 'Aumentar volume',
-                        cor: 'light-blue-1',
+                        cor: 'light-blue-3',
                     },
                     {
                         id: 2,
                         resposta: 'Câmera frontal',
-                        cor: 'light-blue-1',
+                        cor: 'light-blue-3',
                     },
                     {
                         id: 3,
                         resposta: 'Ligar tela',
-                        cor: 'light-blue-1',
+                        cor: 'light-blue-3',
                     },
                     {
                         id: 4,
-                        resposta: 'Ativar internet',
-                        cor: 'light-blue-1',
+                        resposta: 'Diminuir volume',
+                        cor: 'light-blue-3',
                     }
                 ],
                 opcoes2: [{
                         id: 1,
                         resposta: 'Ligar fones',
-                        cor: 'light-blue-1',
+                        cor: 'light-blue-3',
                     },
                     {
                         id: 2,
                         resposta: 'Aumentar volume',
-                        cor: 'light-blue-1',
+                        cor: 'light-blue-3',
                     },
                     {
                         id: 3,
                         resposta: 'Desligar tela',
-                        cor: 'light-blue-1',
+                        cor: 'light-blue-3',
                     },
                     {
                         id: 4,
                         resposta: 'Carregar celular',
-                        cor: 'light-blue-1',
+                        cor: 'light-blue-3',
+                    }
+                ],
+                opcoes3: [{
+                        id: 1,
+                        resposta: 'Ver bateria',
+                        cor: 'light-blue-3',
+                    },
+                    {
+                        id: 2,
+                        resposta: 'Câmera frontal',
+                        cor: 'light-blue-3',
+                    },
+                    {
+                        id: 3,
+                        resposta: 'Virar tela',
+                        cor: 'light-blue-3',
+                    },
+                    {
+                        id: 4,
+                        resposta: 'Carregar celular',
+                        cor: 'light-blue-3',
                     }
                 ],
                 respostaCerta1: 'Ligar tela',
-                respostaCerta2: 'Ligar carregador',
+                respostaCerta2: 'Carregar celular',
+                respostaCerta3: 'Câmera frontal',
             };
         },
         methods: {
             navigateToHome() {
                 this.$router.push('/');
             },
-            notificarAcertou() {
-                this.$q.notify({
-                    message: 'Parabéns! Você acertou!',
-                    timeout: 2000,
-                    type: 'positive',
-                    color: 'positive',
-                    textColor: 'black',
-                    icon: 'thumb_up',
-                    position: 'center',
-                });
-            },
-            notificarErrou() {
-                this.$q.notify({
-                    message: 'Infelizmente você errou, tente novamente!',
-                    timeout: 2000,
-                    type: 'negative',
-                    color: 'negative',
-                    textColor: 'black',
-                    icon: 'thumb_down',
-                    position: 'center',
-                });
-            },
-            checarResposta(id, e) {
-                console.log(e);
-                if (e.target.textContent.toLowerCase() === this.respostaCerta1.toLowerCase()) {
-                    this.opcoes1[id - 1].cor = 'green';
-                    this.notificarAcertou();
-    
-                } else {
-                    this.opcoes1[id - 1].cor = 'red';
-                    this.notificarErrou();
-                }
-            },
-            checarResposta2(id, e) {
-                console.log(e);
-                if (e.target.textContent.toLowerCase() === this.respostaCerta2.toLowerCase()) {
-                    this.opcoes2[id - 1].cor = 'green';
-                    this.notificarAcertou();
-    
-                } else {
-                    this.opcoes2[id - 1].cor = 'red';
-                    this.notificarErrou();
-                }
-            },
         },
         components: {
             carouselController: CarouselController,
+            netoQuiz: NetoQuiz,
         },
     };
 </script>
