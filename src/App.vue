@@ -5,13 +5,13 @@
 </template>
 
 <script>
-
-window.screen.orientation.lock('portrait');
-
-export default {
-  name: 'App',
-};
+  window.screen.orientation.lock('portrait');
+  
+  export default {
+    name: 'App',
+  };
 </script>
 
 <style>
+  
 </style>
