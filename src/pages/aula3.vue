@@ -12,6 +12,12 @@
                     </q-carousel-slide>
                     <q-carousel-slide class='bg-white'>
                         <h3 class='text-center text-weight-medium'>
+                            Ícones representam alguma coisa, sendo semelhantes em aparência com o objeto real
+                            <img :src='imagem9' height='80%' width='100%'>
+                        </h3>
+                    </q-carousel-slide>
+                    <q-carousel-slide class='bg-white'>
+                        <h3 class='text-center text-weight-medium'>
                             Na parte de baixo da tela, encontramos ícones da <b>barra de navegação</b>.
                             <img :src='imagem1' height='100%' width='100%'>
                         </h3>
@@ -70,8 +76,7 @@
                     </q-carousel-slide>
                     <q-carousel-slide class='bg-white'>
                         <h4 class='text-center text-weight-medium'>
-                            Na ESQUERDA da barra, encontramos os ícones de aplicativos,
-                            e mudam de acordo com o que tiver instalado em seu aparelho.
+                            Na ESQUERDA da barra, encontramos os ícones de aplicativos, e mudam de acordo com o que tiver instalado em seu aparelho.
                             <img :src='imagem8' height='100%' width='100%'>
                         </h4>
                     </q-carousel-slide>
@@ -105,6 +110,19 @@
                             </q-list>
                         </h4>
                     </q-carousel-slide>
+                    <q-carousel-slide class='bg-white'>
+                        <h3><big class='text-primary text-center'>Exercícios!</big>
+                            <p>Marque qual alternativa corresponde ao ícone da imagem</p>
+                        </h3>
+                    </q-carousel-slide>
+                    <q-carousel-slide class='bg-white text-center'>
+                        <h3>
+                            <p>Se estiver certa, a opção ficará <big class='text-green'>VERDE</big>, se estiver errado, a opção ficará <big class='text-red'>VERMELHA</big>. Continue tentando até acertar!</p>
+                        </h3>
+                    </q-carousel-slide>
+                    <neto-quiz :opcoes='opcoes1' :imagem='altIconsAndroid[2].imagem' :respostaCerta='respostaCerta1'></neto-quiz>
+                    <neto-quiz :opcoes='opcoes2' :imagem='altIconsAndroid[4].imagem' :respostaCerta='respostaCerta2'></neto-quiz>
+                    <neto-quiz :opcoes='opcoes3' :imagem="require('../assets/baticon.png')" :respostaCerta='respostaCerta3'></neto-quiz>
                 </carousel-controller>
             </q-page>
         </q-page-container>
@@ -113,6 +131,7 @@
 
 <script>
     import CarouselController from '../components/CarouselController.vue';
+    import NetoQuiz from '../components/NetoQuiz.vue';
     
     export default {
         data() {
@@ -126,6 +145,7 @@
                 imagem6: require('../assets/recent-button.png'),
                 imagem7: require('../assets/statusbar.png'),
                 imagem8: require('../assets/appIcons.png'),
+                imagem9: require('../assets/semioticaicones.png'),
                 crudIconsAndroid: [{
                         id: 0,
                         imagem: require('../assets/done.jpg'),
@@ -203,7 +223,73 @@
                         imagem: require('../assets/horario.png'),
                         descricao: 'Horário'
                     },
-                ]
+                ],
+                opcoes1: [{
+                        id: 1,
+                        resposta: 'Editar',
+                        cor: 'light-blue-3',
+                    },
+                    {
+                        id: 2,
+                        resposta: 'Fechar',
+                        cor: 'light-blue-3',
+                    },
+                    {
+                        id: 3,
+                        resposta: 'Wi-fi',
+                        cor: 'light-blue-3',
+                    },
+                    {
+                        id: 4,
+                        resposta: 'Configurar',
+                        cor: 'light-blue-3',
+                    }
+                ],
+                opcoes2: [{
+                        id: 1,
+                        resposta: 'Adicionar',
+                        cor: 'light-blue-3',
+                    },
+                    {
+                        id: 2,
+                        resposta: 'Bateria',
+                        cor: 'light-blue-3',
+                    },
+                    {
+                        id: 3,
+                        resposta: 'Pesquisar',
+                        cor: 'light-blue-3',
+                    },
+                    {
+                        id: 4,
+                        resposta: 'Deletar',
+                        cor: 'light-blue-3',
+                    }
+                ],
+                opcoes3: [{
+                        id: 1,
+                        resposta: 'Nível de bateria',
+                        cor: 'light-blue-3',
+                    },
+                    {
+                        id: 2,
+                        resposta: 'Sinal de rede',
+                        cor: 'light-blue-3',
+                    },
+                    {
+                        id: 3,
+                        resposta: 'Usar a voz',
+                        cor: 'light-blue-3',
+                    },
+                    {
+                        id: 4,
+                        resposta: 'Perfil de som',
+                        cor: 'light-blue-3',
+                    }
+                ],
+                respostaCerta1: 'Configurar',
+                respostaCerta2: 'Pesquisar',
+                respostaCerta3: 'Nível de bateria',
             };
         },
         methods: {
@@ -213,6 +299,15 @@
         },
         components: {
             carouselController: CarouselController,
+            netoQuiz: NetoQuiz,
         },
     };
 </script>
+
+<style>
+    .q-alert-side, .q-alert-content {
+    padding: 12px;
+    font-size: 25px;
+    word-break: break-word;
+}
+</style>

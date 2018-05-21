@@ -1,6 +1,6 @@
 <template>
     <q-carousel-slide class='bg-white'>
-        <p class='text-center'><img :src='imagem' height='70%' width='70%'></p>
+        <p class='text-center'><img :src='imagem' height='60%' width='60%'></p>
         <div class='row gutter-sm' style='margin-left: 0px; margin-bottom: 16px; margin-right: 16px;'>
             <div v-for='opcao in opcoes' v-bind:key='opcao.id' class='col-6'>
                 <q-btn class='full-width text-black' size='xl' :color='opcao.cor' @click="checarResposta(opcao.id,$event)" push :label='opcao.resposta'>
