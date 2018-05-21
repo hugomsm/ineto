@@ -75,7 +75,7 @@
                     </q-carousel-slide>
                     <q-carousel-slide class='bg-white text-center'>
                         <h3>
-                            <p>Se estiver certa, a opção ficará <big class='text-green'>VERDE</big>, se estiver errado, a opção ficará <big class='text-red'>VERMELHA</big>. Continue tentando até acertar!</p>
+                            <p>Se estiver certa, a opção ficará <span class='text-green'>VERDE</span>, se estiver errado, a opção ficará <span class='text-red'>VERMELHA</span>. Continue tentando até acertar!</p>
                         </h3>
                     </q-carousel-slide>
                     <neto-quiz :opcoes='opcoes1' :imagem='imagem2' :respostaCerta='respostaCerta1'></neto-quiz>
@@ -186,9 +186,17 @@
 </script>
 
 <style>
-    .q-alert-side, .q-alert-content {
-    padding: 12px;
-    font-size: 25px;
-    word-break: break-word;
-}
+        .q-alert-side,
+    .q-alert-content {
+        padding: 12px;
+        font-size: 25px;
+        word-break: break-word;
+    }
+    
+    .q-carousel-slide {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        margin: 0;
+        padding: 5px 5px 5px 5px;
+    }
 </style>

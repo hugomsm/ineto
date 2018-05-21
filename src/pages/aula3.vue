@@ -6,7 +6,7 @@
                     <q-carousel-slide class='bg-white'>
                         <h3 class='text-center text-weight-medium'>
                             Em sua tela, você pode encontrar algumas figuras, chamadas
-                            <p><big class='text-primary'>ÍCONES</big>.</p>
+                            <big class='text-primary'>ÍCONES</big>.
                             <p>Vamos entender o que elas significam.</p>
                         </h3>
                     </q-carousel-slide>
@@ -41,10 +41,10 @@
                         </h3>
                     </q-carousel-slide>
                     <q-carousel-slide class='bg-white'>
-                        <h3 class='text-center text-weight-medium'>
+                        <h4 class='text-center text-weight-medium'>
                             O botão em forma de círculo, ou as vezes em formato de "casa", serve para voltar para a tela inicial do sistema.
                             <img :src='imagem5' height='100%' width='100%'>
-                        </h3>
+                        </h4>
                     </q-carousel-slide>
                     <q-carousel-slide class='bg-white'>
                         <h3 class='text-center text-weight-medium'>
@@ -61,7 +61,7 @@
                     </q-carousel-slide>
                     <q-carousel-slide class='bg-white'>
                         <h4 class='text-center text-weight-medium'>
-                            Na DIREITA da barra, encontramos os ícones:
+                            Na direita, encontramos os ícones:
                             <q-list highlight striped-odd dense>
                                 <q-item v-for='item in statusBarAndroid' :key='item.id'>
                                     <q-item-side>
@@ -76,7 +76,7 @@
                     </q-carousel-slide>
                     <q-carousel-slide class='bg-white'>
                         <h4 class='text-center text-weight-medium'>
-                            Na ESQUERDA da barra, encontramos os ícones de aplicativos, e mudam de acordo com o que tiver instalado em seu aparelho.
+                            Na esquerda da barra, encontramos os ícones de aplicativos, e mudam de acordo com o que tiver instalado em seu aparelho.
                             <img :src='imagem8' height='100%' width='100%'>
                         </h4>
                     </q-carousel-slide>
@@ -116,9 +116,9 @@
                         </h3>
                     </q-carousel-slide>
                     <q-carousel-slide class='bg-white text-center'>
-                        <h3>
+                        <h4>
                             <p>Se estiver certa, a opção ficará <big class='text-green'>VERDE</big>, se estiver errado, a opção ficará <big class='text-red'>VERMELHA</big>. Continue tentando até acertar!</p>
-                        </h3>
+                        </h4>
                     </q-carousel-slide>
                     <neto-quiz :opcoes='opcoes1' :imagem='altIconsAndroid[2].imagem' :respostaCerta='respostaCerta1'></neto-quiz>
                     <neto-quiz :opcoes='opcoes2' :imagem='altIconsAndroid[4].imagem' :respostaCerta='respostaCerta2'></neto-quiz>
@@ -305,9 +305,16 @@
 </script>
 
 <style>
-    .q-alert-side, .q-alert-content {
-    padding: 12px;
-    font-size: 25px;
-    word-break: break-word;
-}
+    .q-alert-side,
+    .q-alert-content {
+        padding: 12px;
+        font-size: 25px;
+        word-break: break-word;
+    }
+    .q-carousel-slide {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        margin: 0;
+        padding: 3px;
+    }
 </style>
