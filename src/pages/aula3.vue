@@ -55,52 +55,52 @@
                     </q-carousel-slide>
                     <q-carousel-slide class='bg-white'>
                         <h4 class='text-center text-weight-medium'>
-                            No lado <big>DIREITO</big> da barra, encontramos informações sobre o horário, bateria, internet e som.
+                            Na DIREITA da barra, encontramos os ícones:
+                            <q-list highlight striped-odd dense>
+                                <q-item v-for='item in statusBarAndroid' :key='item.id'>
+                                    <q-item-side>
+                                        <q-item-tile avatar>
+                                            <img :src='item.imagem'>
+                                        </q-item-tile>
+                                    </q-item-side>
+                                    {{ item.descricao }}
+                                </q-item>
+                            </q-list>
+                        </h4>
+                    </q-carousel-slide>
+                    <q-carousel-slide class='bg-white'>
+                        <h4 class='text-center text-weight-medium'>
+                            Na ESQUERDA da barra, encontramos os ícones de aplicativos,
+                            e mudam de acordo com o que tiver instalado em seu aparelho.
+                            <img :src='imagem8' height='100%' width='100%'>
                         </h4>
                     </q-carousel-slide>
                     <q-carousel-slide class='bg-white'>
                         <h4 class='text-center text-weight-medium'>
                             Outros ícones comuns são:
-                            <q-list highlight>
-                                <q-item>
+                            <q-list highlight striped-odd dense>
+                                <q-item v-for='item in crudIconsAndroid' :key='item.id'>
                                     <q-item-side>
                                         <q-item-tile avatar>
-                                            <img :src='imagem8'>
+                                            <img :src='item.imagem'>
                                         </q-item-tile>
                                     </q-item-side>
-                                    Concluir
+                                    {{ item.descricao }}
                                 </q-item>
-                                <q-item>
+                            </q-list>
+                        </h4>
+                    </q-carousel-slide>
+                    <q-carousel-slide class='bg-white'>
+                        <h4 class='text-center text-weight-medium'>
+                            Mais ícones comuns:
+                            <q-list highlight striped-odd dense>
+                                <q-item v-for='item in altIconsAndroid' :key='item.id'>
                                     <q-item-side>
                                         <q-item-tile avatar>
-                                            <img :src='imagem9'>
+                                            <img :src='item.imagem'>
                                         </q-item-tile>
                                     </q-item-side>
-                                    Fechar
-                                </q-item>
-                                <q-item>
-                                    <q-item-side>
-                                        <q-item-tile avatar>
-                                            <img :src='imagem10'>
-                                        </q-item-tile>
-                                    </q-item-side>
-                                    Adicionar
-                                </q-item>
-                                <q-item>
-                                    <q-item-side>
-                                        <q-item-tile avatar>
-                                            <img :src='imagem11'>
-                                        </q-item-tile>
-                                    </q-item-side>
-                                    Deletar
-                                </q-item>
-                                <q-item>
-                                    <q-item-side>
-                                        <q-item-tile avatar>
-                                            <img :src='imagem12'>
-                                        </q-item-tile>
-                                    </q-item-side>
-                                    Editar
+                                    {{ item.descricao }}
                                 </q-item>
                             </q-list>
                         </h4>
@@ -125,16 +125,85 @@
                 imagem5: require('../assets/home-button.png'),
                 imagem6: require('../assets/recent-button.png'),
                 imagem7: require('../assets/statusbar.png'),
-                imagem8: require('../assets/done.jpg'),
-                imagem9: require('../assets/close.jpg'),
-                imagem10: require('../assets/add.jpg'),
-                imagem11: require('../assets/delete.jpg'),
-                imagem12: require('../assets/edit.jpg'),
-                imagem13: require('../assets/dictation.jpg'),
-                imagem14: require('../assets/share.jpg'),
-                imagem15: require('../assets/config.jpg'),
-                imagem16: require('../assets/options.jpg'),
-                imagem17: require('../assets/search.jpg'),
+                imagem8: require('../assets/appIcons.png'),
+                crudIconsAndroid: [{
+                        id: 0,
+                        imagem: require('../assets/done.jpg'),
+                        descricao: 'Concluir',
+                    },
+                    {
+                        id: 1,
+                        imagem: require('../assets/close.jpg'),
+                        descricao: 'Fechar',
+                    },
+                    {
+                        id: 2,
+                        imagem: require('../assets/add.jpg'),
+                        descricao: 'Adicionar',
+                    },
+                    {
+                        id: 3,
+                        imagem: require('../assets/delete.jpg'),
+                        descricao: 'Deletar',
+                    },
+                    {
+                        id: 4,
+                        imagem: require('../assets/edit.jpg'),
+                        descricao: 'Editar'
+                    },
+                ],
+                altIconsAndroid: [{
+                        id: 0,
+                        imagem: require('../assets/dictation.jpg'),
+                        descricao: 'Usar a voz',
+                    },
+                    {
+                        id: 1,
+                        imagem: require('../assets/share.jpg'),
+                        descricao: 'Compartilhar',
+                    },
+                    {
+                        id: 2,
+                        imagem: require('../assets/config.jpg'),
+                        descricao: 'Configurar',
+                    },
+                    {
+                        id: 3,
+                        imagem: require('../assets/options.jpg'),
+                        descricao: 'Mais opções',
+                    },
+                    {
+                        id: 4,
+                        imagem: require('../assets/search.jpg'),
+                        descricao: 'Pesquisar'
+                    },
+                ],
+                statusBarAndroid: [{
+                        id: 0,
+                        imagem: require('../assets/vibra.png'),
+                        descricao: 'Perfil de som'
+                    },
+                    {
+                        id: 1,
+                        imagem: require('../assets/wifi.png'),
+                        descricao: 'Sinal de Wi-Fi (internet)'
+                    },
+                    {
+                        id: 2,
+                        imagem: require('../assets/sinal.png'),
+                        descricao: 'Sinal de rede telefônica'
+                    },
+                    {
+                        id: 3,
+                        imagem: require('../assets/bateria.png'),
+                        descricao: 'Nível de bateria'
+                    },
+                    {
+                        id: 4,
+                        imagem: require('../assets/horario.png'),
+                        descricao: 'Horário'
+                    },
+                ]
             };
         },
         methods: {
