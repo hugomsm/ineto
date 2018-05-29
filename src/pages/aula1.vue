@@ -34,13 +34,13 @@
                     <q-carousel-slide class='bg-white'>
                         <h3 class='text-center text-weight-medium'>
                             Lembre-se que a
-                            <big class='text-red'>APARÊNCIA</big> das funções podem mudar em cada aparelho, mas continuarão fazendo a mesma coisa
+                            <span class='text-red'>APARÊNCIA</span> das funções podem mudar em cada aparelho, mas continuarão fazendo a mesma coisa
                         </h3>
                     </q-carousel-slide>
                     <q-carousel-slide class='bg-white'>
                         <h3 class='text-center text-weight-medium'>
                             Refaça as aulas se necessário!
-                            <div class='q-display-1 text-primary'>Pratique</div> os exercícios das aulas.
+                            <div class='q-display-1 text-primary'>PRATIQUE</div> os exercícios das aulas.
                         </h3>
                     </q-carousel-slide>
                     <q-carousel-slide class='bg-white'>
@@ -48,11 +48,6 @@
                             Bons estudos!
                             <img :src='imagem4' height='100%' width='100%'>
                         </h2>
-                    </q-carousel-slide>
-                    <q-carousel-slide class='bg-white'>
-                        <q-btn class='text-black absolute-center' size='xl' color='light-blue-3' @click='navigateToHome'>
-                            Finalizar aula
-                        </q-btn>
                     </q-carousel-slide>
                 </carousel-controller>
             </q-page>

@@ -2,6 +2,9 @@
     <q-carousel-slide class='bg-white'>
         <p class='text-center'><img :src='imagem' height='50%' width='50%'></p>
         <div class='row gutter-sm' style='margin-left: 0px; margin-bottom: 16px; margin-right: 16px;'>
+            <h3 class='text-center text-weight-medium'>
+            {{texto}}
+            </h3>
             <div v-for='opcao in opcoes' v-bind:key='opcao.id' class='col-6'>
                 <q-btn class='full-width text-black' size='xl' :color='opcao.cor' @click="checarResposta(opcao.id,$event)" push :label='opcao.resposta'>
                 </q-btn>
@@ -12,7 +15,7 @@
 
 <script>
     export default {
-        props: ['opcoes', 'imagem', 'respostaCerta'],
+        props: ['opcoes', 'imagem', 'respostaCerta', 'texto'],
         data() {
             return {};
         },

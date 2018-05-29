@@ -81,6 +81,8 @@
                     <neto-quiz :opcoes='opcoes1' :imagem='imagem2' :respostaCerta='respostaCerta1'></neto-quiz>
                     <neto-quiz :opcoes='opcoes2' :imagem='imagem4' :respostaCerta='respostaCerta2'></neto-quiz>
                     <neto-quiz :opcoes='opcoes3' :imagem='imagem9' :respostaCerta='respostaCerta3'></neto-quiz>
+                    <neto-quiz :opcoes='opcoesVF1' :respostaCerta='"Verdadeiro"' :texto='"Todo aparelho possui bateria"'></neto-quiz>
+                    <neto-quiz :opcoes='opcoesVF2' :respostaCerta='"Falso"' :texto='"Todo aparelho possui flash na câmera"'></neto-quiz>
                 </carousel-controller>
             </q-page>
         </q-page-container>
@@ -167,6 +169,28 @@
                         resposta: 'Carregar celular',
                         cor: 'light-blue-3',
                     }
+                ],
+                opcoesVF1: [{
+                        id: 1,
+                        resposta: 'Verdadeiro',
+                        cor: 'light-blue-3',
+                    },
+                    {
+                        id: 2,
+                        resposta: 'Falso',
+                        cor: 'light-blue-3',
+                    },
+                ],
+                opcoesVF2: [{
+                        id: 1,
+                        resposta: 'Verdadeiro',
+                        cor: 'light-blue-3',
+                    },
+                    {
+                        id: 2,
+                        resposta: 'Falso',
+                        cor: 'light-blue-3',
+                    },
                 ],
                 respostaCerta1: 'Ligar tela',
                 respostaCerta2: 'Carregar celular',
