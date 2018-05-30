@@ -37,7 +37,7 @@
                     timeout: 2000,
                     type: 'negative',
                     color: 'negative',
-                    textColor: 'black',
+                    textColor: 'white',
                     icon: 'thumb_down',
                     position: 'center',
                 });

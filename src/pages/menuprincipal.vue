@@ -11,7 +11,7 @@
         </q-list>
         <q-page-sticky position="bottom-right">
           <a v-back-to-top.animate='{offset: 50, duration: 200}' class="animate-pop play-backtotop non-selectable shadow-2" v-ripple.mat>
-            Voltar ao topo
+            VOLTAR AO TOPO
           </a>
         </q-page-sticky>
       </q-page>

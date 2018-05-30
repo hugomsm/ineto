@@ -20,16 +20,81 @@
                         <h4 class='text-center text-weight-medium'>
                             O teclado possui todas as <span class='text-primary'>letras</span>,
                             <span class='text-green'>números</span> e <span class='text-red'>
-                                símbolos</span> necessários
-                            para digitação.
+                                                                        símbolos</span> necessários para digitação.
                             <img :src='imagem2' height='80%' width='80%'>
                         </h4>
                     </q-carousel-slide>
-                    <neto-quiz :opcoes='opcoes1' :imagem='altIconsAndroid[2].imagem' :respostaCerta='respostaCerta1'></neto-quiz>
-                    <neto-quiz :opcoes='opcoes2' :imagem='altIconsAndroid[4].imagem' :respostaCerta='respostaCerta2'></neto-quiz>
-                    <neto-quiz :opcoes='opcoes3' :imagem="require('../assets/baticon.png')" :respostaCerta='respostaCerta3'></neto-quiz>
-                    <neto-quiz :opcoes='opcoesVF1' :respostaCerta='"Falso"' :texto='"Os ícones são sempre iguais em todos os aparelhos"'></neto-quiz>
-                    <neto-quiz :opcoes='opcoesVF2' :respostaCerta='"Falso"' :texto='"A barra na parte inferior da tela se chama Barra de Status"'></neto-quiz>
+                    <q-carousel-slide class='bg-white' v-for='item in opcoesTeclado' :key='item.id'>
+                        <h4 class='text-center text-weight-medium'>
+                            {{item.descricao}}
+                        </h4>
+                        <p class='text-center'><img :src='item.imagem' height='70%' width='70%'></p>
+                    </q-carousel-slide>
+                    <q-carousel-slide class='bg-white'>
+                        <br>
+                        <q-input class='q-title text-center' v-model='text' float-label="APERTE AQUI PARA COMEÇAR" placeholder="DIGITE O QUE QUISER" clearable align='center'></q-input>
+                        <h3 class='text-center text-weight-medium'>Aperte na linha acima para testar o teclado!</h3>
+                    </q-carousel-slide>
+                    <q-carousel-slide class='bg-white'>
+                        <h3 class='text-center text-weight-medium'>
+                            Vamos <span class='text-primary'>PRATICAR?</span>
+                            <p>Na próxima tela, digite <span class='text-primary'>INETO</span> e passe para a próxima tela, onde iremos verificar se foi digitado corretamente.
+                            </p>
+                        </h3>
+                    </q-carousel-slide>
+                    <q-carousel-slide class='bg-white'>
+                        <br>
+                        <q-input class='q-title text-center' v-model='teste1' float-label="APERTE AQUI PARA COMEÇAR" placeholder="DIGITE INETO" clearable align='center'></q-input>
+                        <h3 class='text-center text-weight-medium'>Aperte na linha acima para começar a digitar! Passe para a
+                            <span class='text-green'>PRÓXIMA</span> tela para verificar
+                        </h3>
+                    </q-carousel-slide>
+                    <neto-digitacao :model="teste1" :resposta="resposta1"></neto-digitacao>
+                    <q-carousel-slide class='bg-white'>
+                        <h4 class='text-center text-weight-medium'>
+                            Vamos testar a digitação de <span class='text-primary'>NÚMEROS</span>.
+                            <p>Na próxima tela, digite <span class='text-primary'>2018</span> e passe para a próxima tela, onde iremos verificar se foi digitado corretamente.
+                            </p>
+                        </h4>
+                    </q-carousel-slide>
+                    <q-carousel-slide class='bg-white'>
+                        <br>
+                        <q-input class='q-title text-center' v-model='teste2' type='number' float-label="APERTE AQUI PARA COMEÇAR" placeholder="DIGITE 2018" clearable align='center'></q-input>
+                        <h3 class='text-center text-weight-medium'>Aperte na linha acima para começar a digitar! Passe para a
+                            <span class='text-green'>PRÓXIMA</span> tela para verificar
+                        </h3>
+                    </q-carousel-slide>
+                    <neto-digitacao :model="teste2" :resposta="resposta2"></neto-digitacao>
+                    <q-carousel-slide class='bg-white'>
+                        <h3 class='text-center text-weight-medium'>
+                            Vamos <span class='text-primary'>treinar mais</span>
+                            <p>Na próxima tela, digite <span class='text-green'>EU SOU DO BRASIL</span> e passe para a próxima tela, onde iremos verificar se foi digitado corretamente.
+                            </p>
+                        </h3>
+                    </q-carousel-slide>
+                     <q-carousel-slide class='bg-white'>
+                        <br>
+                        <q-input class='q-title text-center' v-model='teste3' float-label="APERTE AQUI PARA COMEÇAR"
+                        placeholder="DIGITE EU SOU DO BRASIL" clearable align='center'></q-input>
+                        <h3 class='text-center text-weight-medium'>Aperte na linha acima para começar a digitar! Passe para a
+                            <span class='text-green'>PRÓXIMA</span> tela para verificar
+                        </h3>
+                    </q-carousel-slide>
+                    <neto-digitacao :model="teste3" :resposta="resposta3"></neto-digitacao>
+                    <q-carousel-slide class='bg-white'>
+                        <h3 class='text-center text-weight-medium'>
+                            <p>Na próxima tela, digite <span class='text-primary'>49732561</span> e passe para a próxima tela, onde iremos verificar se foi digitado corretamente.
+                            </p>
+                        </h3>
+                    </q-carousel-slide>
+                    <q-carousel-slide class='bg-white'>
+                        <br>
+                        <q-input class='q-title text-center' v-model='teste4' type='number' float-label="APERTE AQUI PARA COMEÇAR" placeholder="DIGITE 49732561" clearable align='center'></q-input>
+                        <h3 class='text-center text-weight-medium'>Aperte na linha acima e digite <span class='text-primary'>49732561</span> <p>Passe para a
+                            <span class='text-green'>PRÓXIMA</span> tela para verificar</p>
+                        </h3>
+                    </q-carousel-slide>
+                    <neto-digitacao :model="teste4" :resposta="resposta4"></neto-digitacao>
                 </carousel-controller>
             </q-page>
         </q-page-container>
@@ -38,7 +103,7 @@
 
 <script>
     import CarouselController from '../components/CarouselController.vue';
-    import NetoQuiz from '../components/NetoQuiz.vue';
+    import NetoDigitacao from '../components/NetoDigitacao.vue';
     
     export default {
         data() {
@@ -46,189 +111,102 @@
                 /* eslint-disable global-require */
                 imagem1: require('../assets/tecladoandroid.jpg'),
                 imagem2: require('../assets/datilografia.png'),
-                imagem3: require('../assets/default-navbar.jpg'),
-                imagem4: require('../assets/back-button.png'),
-                imagem5: require('../assets/home-button.png'),
-                imagem6: require('../assets/recent-button.png'),
-                imagem7: require('../assets/statusbar.png'),
-                imagem8: require('../assets/appIcons.png'),
-                imagem9: require('../assets/semioticaicones.png'),
-                crudIconsAndroid: [{
+                text: '',
+                teste1: '',
+                teste2: '',
+                teste3: '',
+                teste4: '',
+                resposta1: 'ineto',
+                resposta2: '2018',
+                resposta3: 'eu sou do brasil',
+                resposta4: '49732561',
+                opcoesTeclado: [{
                         id: 0,
-                        imagem: require('../assets/done.jpg'),
-                        descricao: 'Concluir',
+                        imagem: require('../assets/teclado-android.jpg'),
+                        descricao: 'Este é um modelo comum de teclado',
                     },
                     {
                         id: 1,
-                        imagem: require('../assets/close.jpg'),
-                        descricao: 'Fechar',
+                        imagem: require('../assets/tecladoapagar.jpg'),
+                        descricao: 'Esse botão apaga a última coisa digitada',
                     },
                     {
                         id: 2,
-                        imagem: require('../assets/add.jpg'),
-                        descricao: 'Adicionar',
+                        imagem: require('../assets/tecladoemojis.jpg'),
+                        descricao: 'Esse botão mostra "carinhas" conhecidas como emojis',
                     },
                     {
                         id: 3,
-                        imagem: require('../assets/delete.jpg'),
-                        descricao: 'Deletar',
+                        imagem: require('../assets/tecladoespaco.jpg'),
+                        descricao: 'Esse botão serve para dar espaço entre as palavras',
                     },
                     {
                         id: 4,
-                        imagem: require('../assets/edit.jpg'),
-                        descricao: 'Editar'
+                        imagem: require('../assets/tecladoshift.jpg'),
+                        descricao: 'Esse botão alterna entre letras maíusculas e minúsculas'
+                    },
+                    {
+                        id: 5,
+                        imagem: require('../assets/tecladosimbolos.jpg'),
+                        descricao: 'Esse botão alterna entre os símbolos e letras'
+                    },
+                    {
+                        id: 6,
+                        imagem: require('../assets/tecladoenter.jpg'),
+                        descricao: 'Esse botão pula para a próxima linha'
+                    },
+                    {
+                        id: 7,
+                        imagem: require('../assets/tecladosugestoes.jpg'),
+                        descricao: 'Essa barra mostra sugestões de palavras conforme você escreve'
                     },
                 ],
-                altIconsAndroid: [{
-                        id: 0,
-                        imagem: require('../assets/dictation.jpg'),
-                        descricao: 'Usar a voz',
-                    },
-                    {
-                        id: 1,
-                        imagem: require('../assets/share.jpg'),
-                        descricao: 'Compartilhar',
-                    },
-                    {
-                        id: 2,
-                        imagem: require('../assets/config.jpg'),
-                        descricao: 'Configurar',
-                    },
-                    {
-                        id: 3,
-                        imagem: require('../assets/options.jpg'),
-                        descricao: 'Mais opções',
-                    },
-                    {
-                        id: 4,
-                        imagem: require('../assets/search.jpg'),
-                        descricao: 'Pesquisar'
-                    },
-                ],
-                statusBarAndroid: [{
-                        id: 0,
-                        imagem: require('../assets/vibra.png'),
-                        descricao: 'Perfil de som'
-                    },
-                    {
-                        id: 1,
-                        imagem: require('../assets/wifi.png'),
-                        descricao: 'Sinal de Wi-Fi (internet)'
-                    },
-                    {
-                        id: 2,
-                        imagem: require('../assets/sinal.png'),
-                        descricao: 'Sinal de rede telefônica'
-                    },
-                    {
-                        id: 3,
-                        imagem: require('../assets/bateria.png'),
-                        descricao: 'Nível de bateria'
-                    },
-                    {
-                        id: 4,
-                        imagem: require('../assets/horario.png'),
-                        descricao: 'Horário'
-                    },
-                ],
-                opcoes1: [{
-                        id: 1,
-                        resposta: 'Editar',
-                        cor: 'light-blue-3',
-                    },
-                    {
-                        id: 2,
-                        resposta: 'Fechar',
-                        cor: 'light-blue-3',
-                    },
-                    {
-                        id: 3,
-                        resposta: 'Wi-fi',
-                        cor: 'light-blue-3',
-                    },
-                    {
-                        id: 4,
-                        resposta: 'Configurar',
-                        cor: 'light-blue-3',
-                    }
-                ],
-                opcoes2: [{
-                        id: 1,
-                        resposta: 'Adicionar',
-                        cor: 'light-blue-3',
-                    },
-                    {
-                        id: 2,
-                        resposta: 'Bateria',
-                        cor: 'light-blue-3',
-                    },
-                    {
-                        id: 3,
-                        resposta: 'Pesquisar',
-                        cor: 'light-blue-3',
-                    },
-                    {
-                        id: 4,
-                        resposta: 'Deletar',
-                        cor: 'light-blue-3',
-                    }
-                ],
-                opcoes3: [{
-                        id: 1,
-                        resposta: 'Nível de bateria',
-                        cor: 'light-blue-3',
-                    },
-                    {
-                        id: 2,
-                        resposta: 'Sinal de rede',
-                        cor: 'light-blue-3',
-                    },
-                    {
-                        id: 3,
-                        resposta: 'Usar a voz',
-                        cor: 'light-blue-3',
-                    },
-                    {
-                        id: 4,
-                        resposta: 'Perfil de som',
-                        cor: 'light-blue-3',
-                    }
-                ],
-                opcoesVF1: [{
-                        id: 1,
-                        resposta: 'Verdadeiro',
-                        cor: 'light-blue-3',
-                    },
-                    {
-                        id: 2,
-                        resposta: 'Falso',
-                        cor: 'light-blue-3',
-                    },
-                ],
-                opcoesVF2: [{
-                        id: 1,
-                        resposta: 'Verdadeiro',
-                        cor: 'light-blue-3',
-                    },
-                    {
-                        id: 2,
-                        resposta: 'Falso',
-                        cor: 'light-blue-3',
-                    },
-                ],
-                respostaCerta1: 'Configurar',
-                respostaCerta2: 'Pesquisar',
-                respostaCerta3: 'Nível de bateria',
             };
         },
         methods: {
             navigateToHome() {
                 this.$router.push('/');
             },
+            notificarAcertou() {
+                this.$q.notify({
+                    message: 'Parabéns! Você acertou! Continue a aula',
+                    timeout: 3000,
+                    type: 'positive',
+                    color: 'positive',
+                    textColor: 'black',
+                    icon: 'thumb_up',
+                    position: 'center',
+                });
+            },
+            notificarErrou() {
+                this.$q.notify({
+                    message: 'Infelizmente você errou, volte e tente novamente!',
+                    timeout: 3000,
+                    type: 'negative',
+                    color: 'negative',
+                    textColor: 'white',
+                    icon: 'thumb_down',
+                    position: 'center',
+                });
+            },
+            checkAcertou() {
+                if (this.teste1.toLowerCase() === "ineto") {
+                    this.notificarAcertou();
+                } else {
+                    this.notificarErrou();
+                }
+            },
+            checkAcertou2() {
+                if (this.teste2.toString().toLowerCase() === "2018") {
+                    this.notificarAcertou();
+                } else {
+                    this.notificarErrou();
+                }
+            }
         },
         components: {
             carouselController: CarouselController,
-            netoQuiz: NetoQuiz,
+            netoDigitacao: NetoDigitacao,
         },
     };
 </script>
