@@ -20,7 +20,7 @@
                         <h4 class='text-center text-weight-medium'>
                             O teclado possui todas as <span class='text-primary'>letras</span>,
                             <span class='text-green'>números</span> e <span class='text-red'>
-                                                                        símbolos</span> necessários para digitação.
+                            símbolos</span> necessários para digitação.
                             <img :src='imagem2' height='80%' width='80%'>
                         </h4>
                     </q-carousel-slide>
@@ -90,11 +90,39 @@
                     <q-carousel-slide class='bg-white'>
                         <br>
                         <q-input class='q-title text-center' v-model='teste4' type='number' float-label="APERTE AQUI PARA COMEÇAR" placeholder="DIGITE 49732561" clearable align='center'></q-input>
-                        <h3 class='text-center text-weight-medium'>Aperte na linha acima e digite <span class='text-primary'>49732561</span> <p>Passe para a
-                            <span class='text-green'>PRÓXIMA</span> tela para verificar</p>
+                        <h3 class='text-center text-weight-medium'>Aperte na linha acima e digite 49732561! Passe para a
+                            <span class='text-green'>PRÓXIMA</span> tela para verificar
                         </h3>
                     </q-carousel-slide>
                     <neto-digitacao :model="teste4" :resposta="resposta4"></neto-digitacao>
+                    <q-carousel-slide class='bg-white'>
+                        <h3 class='text-center text-weight-medium'>
+                            <p>Vamos treinar os acentos. Digite <span class='text-primary'>AVIÃO</span> e passe para a próxima tela, onde iremos verificar se foi digitado corretamente.
+                            </p>
+                        </h3>
+                    </q-carousel-slide>
+                     <q-carousel-slide class='bg-white'>
+                        <br>
+                        <q-input class='q-title text-center' v-model='teste5' float-label="APERTE AQUI PARA COMEÇAR" placeholder="DIGITE AVIÃO" clearable align='center'></q-input>
+                        <h3 class='text-center text-weight-medium'>Aperte na linha acima e digite AVIÃO! Passe para a
+                            <span class='text-green'>PRÓXIMA</span> tela para verificar
+                        </h3>
+                    </q-carousel-slide>
+                    <neto-digitacao :model="teste5" :resposta="resposta5"></neto-digitacao>
+                    <q-carousel-slide class='bg-white'>
+                        <h3 class='text-center text-weight-medium'>
+                            <p>Digite <span class='text-primary'>METRÔ</span> e passe para a próxima tela, onde iremos verificar se foi digitado corretamente.
+                            </p>
+                        </h3>
+                    </q-carousel-slide>
+                     <q-carousel-slide class='bg-white'>
+                        <br>
+                        <q-input class='q-title text-center' v-model='teste6' float-label="APERTE AQUI PARA COMEÇAR" placeholder="DIGITE AVIÃO" clearable align='center'></q-input>
+                        <h3 class='text-center text-weight-medium'>Aperte na linha acima e digite METRÔ! Passe para a
+                            <span class='text-green'>PRÓXIMA</span> tela para verificar
+                        </h3>
+                    </q-carousel-slide>
+                    <neto-digitacao :model="teste6" :resposta="resposta6"></neto-digitacao>
                 </carousel-controller>
             </q-page>
         </q-page-container>
@@ -116,10 +144,14 @@
                 teste2: '',
                 teste3: '',
                 teste4: '',
+                teste5: '',
+                teste6: '',
                 resposta1: 'ineto',
                 resposta2: '2018',
                 resposta3: 'eu sou do brasil',
                 resposta4: '49732561',
+                resposta5: 'avião',
+                resposta6: 'metrô',
                 opcoesTeclado: [{
                         id: 0,
                         imagem: require('../assets/teclado-android.jpg'),
@@ -127,36 +159,41 @@
                     },
                     {
                         id: 1,
+                        imagem: require('../assets/tecladodigitacao.jpg'),
+                        descricao: 'Essas são as letras e números disponíveis para digitação',
+                    },
+                    {
+                        id: 2,
+                        imagem: require('../assets/tecladoacento.jpg'),
+                        descricao: 'Pressione o dedo por alguns segundos para usar os acentos',
+                    },
+                    {
+                        id: 3,
                         imagem: require('../assets/tecladoapagar.jpg'),
                         descricao: 'Esse botão apaga a última coisa digitada',
                     },
                     {
-                        id: 2,
-                        imagem: require('../assets/tecladoemojis.jpg'),
-                        descricao: 'Esse botão mostra "carinhas" conhecidas como emojis',
-                    },
-                    {
-                        id: 3,
+                        id: 4,
                         imagem: require('../assets/tecladoespaco.jpg'),
                         descricao: 'Esse botão serve para dar espaço entre as palavras',
                     },
                     {
-                        id: 4,
+                        id: 5,
                         imagem: require('../assets/tecladoshift.jpg'),
                         descricao: 'Esse botão alterna entre letras maíusculas e minúsculas'
                     },
                     {
-                        id: 5,
+                        id: 6,
                         imagem: require('../assets/tecladosimbolos.jpg'),
                         descricao: 'Esse botão alterna entre os símbolos e letras'
                     },
                     {
-                        id: 6,
+                        id: 7,
                         imagem: require('../assets/tecladoenter.jpg'),
                         descricao: 'Esse botão pula para a próxima linha'
                     },
                     {
-                        id: 7,
+                        id: 8,
                         imagem: require('../assets/tecladosugestoes.jpg'),
                         descricao: 'Essa barra mostra sugestões de palavras conforme você escreve'
                     },
