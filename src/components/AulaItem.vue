@@ -13,36 +13,32 @@
 </template>
 
 <script>
-  export default {
-    props: ['aulaSelecionada'],
-    data() {
-      return {
-        /* eslint-disable global-require */
-        imagem: require('../assets/aula.png'),
-      };
-    },
-    methods: {
-      feedbackClick() {
-        const DF = window.plugins.deviceFeedback;
-        DF.haptic(DF.VIRTUAL_KEY);
-      },
-      navigateToAula() {
-        const id = this.aulaSelecionada.idAula.toString();
-        const url = `aula${id}`;
-        this.$router.push(`${url}`);
-      },
-    },
-  };
+export default {
+  props: ["aulaSelecionada"],
+  data() {
+    return {
+      /* eslint-disable global-require */
+      imagem: require("../assets/aula.png")
+    };
+  },
+  methods: {
+    navigateToAula() {
+      const id = this.aulaSelecionada.idAula.toString();
+      const url = `aula${id}`;
+      this.$router.push(`${url}`);
+    }
+  }
+};
 </script>
 
 <style>
-  .q-item-sublabel {
-    color: black;
-    text-align: center;
-  }
-  
-  .q-item-label {
-    color: black;
-    text-align: center;
-  }
+.q-item-sublabel {
+  color: black;
+  text-align: center;
+}
+
+.q-item-label {
+  color: black;
+  text-align: center;
+}
 </style>
